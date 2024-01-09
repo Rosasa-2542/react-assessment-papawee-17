@@ -29,7 +29,7 @@ const Home= () => {
             <button onClick={handleUserbutton}>User Home sector</button>
             <button onClick={handleAdminbutton}>Admin Home sector</button>
             {sector === "user" ? <User employees = {employees}/> : null}
-            {sector === "admin" ? <Admin /> : null}
+            {sector === "admin" ? <Admin employees = {employees}/> : null}
         </div> 
     );
 }
