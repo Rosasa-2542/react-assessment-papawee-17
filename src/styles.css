@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    background-color: grey;
+    color:black;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    list-style: none;
+    height: 50px;
+    align-items: center;
+  
+}
+
+ nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 500px;
+    height: 300px;
+}
+
+.Rosa {
+    text-align: center;
+}

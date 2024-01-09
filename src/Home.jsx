@@ -1,33 +1,33 @@
-const mockEmployees = [
-  {
-    id: 0,
-    name: "mock",
-    lastname: 'mocklastname',
-    position: "Manager"
-  },
-  {
-    id: 1,
-    name: "employee 1",
-    lastname: "em",
-    position: "Engineer"
-  },
-  {
-    id: 2,
-    name: "employee 2",
-    lastname: "lord",
-    position: "Designer"
-  },
-]
+import React from 'react'
+import Navbar from './Navbar'
+import './styles.css'
+import { useState, useEffect} from 'react'
+import User from './User'
+import Admin from './Admin'
 
-const Home = () => {
+// import {mockEmployees}
 
-  return (
-    <div>
+const Home= () => {
+    const [employees, setEmployees] = useState();
+    const [sector, setSector] = useState("");
 
-    </div>
-  )
+    const handleUserbutton = () => {
+        setSector("user");
+    }
+    const handleAdminbutton = () => {
+        setSector("admin");
+    }
+    
+
+    return (
+        <div>
+           <Navbar />
+            <h1>Generation</h1>
+            <button onClick={handleUserbutton}>User Home sector</button>
+            <button onClick={handleAdminbutton}>Admin Home sector</button>
+            {sector === "user" ? <User /> : null}
+            {sector === "admin" ? <Admin /> : null}
+        </div> 
+    );
 }
-
-
-
 export default Home
